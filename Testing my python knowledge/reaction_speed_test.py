@@ -30,12 +30,14 @@ def time_tracking_game():
     print("\n--------------------------------------------------")
     print(f"Total time since initialization: {total_elapsed_ms:.2f} s")
     
-    if abs(difference_ms) < 1.00:
-        print(f"Incredible! You were off by only {difference_ms:.2f} s! You have a perfect internal clock.")
+    if abs(difference_ms) < 0.500:
+        print(f"Incredible! You were off by only {difference_ms:.2f} s! You are a poor man pikin.")
     elif difference_ms < 0.00:
-        print(f"A bit too fast! You pressed it {abs(difference_ms):.2f} s early.")
+        print(f"A bit too fast! You pressed it {abs(difference_ms):.2f} s early. You are somewhat of a failure.")
+    elif difference_ms > 1.00:
+        print(f"You pressed it {difference_ms:.2f} s late. You no get hope")
     else:
-        print(f"A bit too slow! You pressed it {difference_ms:.2f} s late.")
+        print(f"A bit too slow! You pressed it {difference_ms:.2f} s late. You are a failure.")
     print("--------------------------------------------------")
 
 if __name__ == "__main__":
