@@ -9,3 +9,4 @@ def trade_execution():
     e = int(input('Planned risk: '))
     f = lot 
     print(f"Today is {a}, {b}, the {c}, the {d}, the {e}, you should use {lot} ")
+# I have migrated this project to another github repository named CLI logger.
