@@ -1,0 +1,1 @@
+Today is a sunday and i can't really be bothered to code right now. I am adding ths read me to say that this whole repository is for me to post the codes that i built as i was learning python.
