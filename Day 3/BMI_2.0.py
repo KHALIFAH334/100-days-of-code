@@ -1,6 +1,6 @@
 height = input("How tall are you? ")
 weight = input("How much do you weigh? ")
-BMI = int(weight)/(float(height)**2)
+BMI = float(weight)/(float(height)**2)
 print(BMI)
 if BMI < 18.5:
     print ("You are Underweight")
