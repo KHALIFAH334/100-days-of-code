@@ -2,7 +2,7 @@ graph TB
     %% External Layer
     User((Clinicians / Users))
     
-    %% Edge Layer
+    Edge Layer
     subgraph Edge [Public Edge Layer]
         R53[Route 53 DNS]
         WAF[AWS WAF]
@@ -10,7 +10,7 @@ graph TB
         S3_Static[S3: Frontend Assets]
     end
 
-    %% VPC Layer
+     VPC Layer
     subgraph VPC [VPC - Multi-AZ / No Direct Inbound Access]
         
         subgraph Public_Subnets [Public Subnets]
@@ -35,7 +35,7 @@ graph TB
         end
     end
 
-    %% AWS Managed Services Layer
+    AWS Managed Services Layer
     subgraph AWS_Managed [Security & Observability]
         Secrets[AWS Secrets Manager]
         S3_Docs[S3: Clinical Docs - Encrypted]
@@ -43,7 +43,7 @@ graph TB
         CW[CloudWatch & X-Ray]
     end
 
-    %% Traffic Flow
+     Traffic Flow
     User --> R53
     R53 --> WAF
     WAF --> CF
