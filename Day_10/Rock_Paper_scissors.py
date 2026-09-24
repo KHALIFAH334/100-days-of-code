@@ -38,6 +38,7 @@ else:
     print(scissors)
 
 random_choice = random.randint(0, 2)
+
 if random_choice == 0:
     print("Computer chose:")
     print(rock)
